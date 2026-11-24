@@ -9,7 +9,12 @@ const client = new Client({
     ],
     partials: [Partials.Channel]
 });
+
 const TOKEN = process.env.DISCORD_BOT_TOKEN;
+
+if (!TOKEN) {
+  throw new Error("Defina a variável de ambiente DISCORD_BOT_TOKEN antes de iniciar o bot.");
+}
 const dataFile = 'data.json';
 
 function salvarDados(dados) {
