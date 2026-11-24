@@ -32,11 +32,19 @@ cd bot-dc
 npm install
 ```
 
-3. Configure o token do bot:
+3. Configure o token sem gravá-lo no código. Defina `DISCORD_BOT_TOKEN` no ambiente do processo:
 
-Altere diretamente no `index.js` a constante `TOKEN` com o seu token de bot.
+   **Windows PowerShell:**
+   ```powershell
+   $env:DISCORD_BOT_TOKEN = "<seu-token-do-bot>"
+   ```
 
-> ⚠️ **Recomendado**: Para maior segurança, use variáveis de ambiente ou um `.env` com a lib `dotenv`.
+   **Linux/macOS:**
+   ```bash
+   export DISCORD_BOT_TOKEN="<seu-token-do-bot>"
+   ```
+
+   Nunca publique o token nem o salve em um arquivo versionado.
 
 4. Inicie o bot:
 
